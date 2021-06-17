@@ -8,18 +8,31 @@
 // you should include an HTTP header with the correct content type:
 
 const http = require('http'); // require http core module
+const fs = require('fs'); // require http core module
 
 const server = http.createServer((req, res) => {
+
+
+    const data = fs.readFileSync(`${__dirname}/userApi/userdata.json`, "utf-8");
+    const objData = JSON.parse(data);
+
     //res.end("Hello form the other sides");
     //console.log(req.url);
     if(req.url == "/"){
-        res.end("<h1>Home Page</h1>");
+        res.end("<center><h1>Home Page</h1></center>");
     }
     else if(req.url == "/about"){
-        res.end("<h1>About Page</h1>");
+        res.end("<center><h1>About Page</h1></center>");
     }
     else if(req.url == "/contact"){
-        res.end("<h1>Contact Us Page</h1>");
+        res.end("<center><h1>Contact Us Page</h1></center>");
+    }
+    else if(req.url == "/userapi"){
+        
+        res.writeHead(200, {"Content-type" : "application/json"});
+        res.end(objData[2].name);
+        //res.end("<center><h1>User API Page</h1></center>");
+        
     }
     else {
         res.writeHead(400, {"Content-type" : "text/html"});
