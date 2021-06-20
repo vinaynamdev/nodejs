@@ -1,0 +1,10 @@
+First,
+Hi, My name in vinay name
+today we are creating a file read syaten using Stream Module in Node.js
+
+Second,
+Hi, My name in vinay name
+today we are creating a file read syaten using Stream Module in Node.js
+
+Hi, My name in vinay name
+today we are creating a file read syaten using Stream Module in Node.js
