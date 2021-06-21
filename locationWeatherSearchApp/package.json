@@ -1,0 +1,14 @@
+{
+  "name": "locationweathersearchapp",
+  "version": "1.0.0",
+  "description": "Location weather Search App in Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vinay Namdev",
+  "license": "ISC",
+  "dependencies": {
+    "requests": "^0.3.0"
+  }
+}
